@@ -3,7 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fruit's Bounty | Furit salad in jaipur | Jaipur's Pride</title>
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Fruit's Bounty | Fresh Fruit Salad Delivery in Jaipur</title>
+    <meta name="description" content="Get fresh, healthy fruit salads delivered to your doorstep in Jaipur. From our roots at Chitrakoot Stadium to home delivery, enjoy our signature C-Glow and Tropical mixes.">
+    <meta name="keywords" content="fruit salad Jaipur, healthy breakfast Jaipur, fresh fruits Chitrakoot Stadium, Fruit's Bounty, food delivery Jaipur, sprouts mix, fruitsbounty.shop">
+    <meta name="author" content="Fruit's Bounty">
+    <link rel="canonical" href="https://fruitsbounty.shop">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fruitsbounty.shop">
+    <meta property="og:title" content="Fruit's Bounty | Fresh Fruit Salad Delivery in Jaipur">
+    <meta property="og:description" content="Authentic stadium-style fruit salads and healthy mixes now delivered across Jaipur. Order your morning fuel today from fruitsbounty.shop!">
+    <meta property="og:image" content="https://fruitsbounty.shop/images.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://fruitsbounty.shop">
+    <meta property="twitter:title" content="Fruit's Bounty | Fresh Fruit Salad Delivery in Jaipur">
+    <meta property="twitter:description" content="Authentic stadium-style fruit salads and healthy mixes now delivered across Jaipur. Order your morning fuel today!">
+    <meta property="twitter:image" content="https://fruitsbounty.shop/images.jpg">
+
+    <!-- Structured Data (JSON-LD) - Local Business & Product -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FoodEstablishment",
+      "name": "Fruit's Bounty",
+      "image": "https://fruitsbounty.shop/images.jpg",
+      "@id": "https://fruitsbounty.shop",
+      "url": "https://fruitsbounty.shop",
+      "telephone": "+91-XXXXXXXXXX",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Chitrakoot Stadium Area",
+        "addressLocality": "Jaipur",
+        "addressRegion": "Rajasthan",
+        "postalCode": "302021",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 26.9075,
+        "longitude": 75.7396
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "06:00",
+        "closes": "11:00"
+      },
+      "menu": "https://fruitsbounty.shop#products",
+      "servesCuisine": "Healthy, Fruit Salads, Sprouts",
+      "priceRange": "₹",
+      "hasMenu": {
+        "@type": "Menu",
+        "name": "Morning Mixes",
+        "hasMenuSection": [
+          {
+            "@type": "MenuSection",
+            "name": "Signature Mixes",
+            "hasMenuItem": [
+              {
+                "@type": "MenuItem",
+                "name": "C-Glow Mix",
+                "description": "Vitamin-C powerhouse with oranges, kiwi, and pomegranate."
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Tropical Fruit Salad",
+                "description": "Sweet mix of seasonal mango, papaya, and grapes."
+              }
+            ]
+          }
+        ]
+      }
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Caveat:wght@700&display=swap" rel="stylesheet">
     <style>
@@ -91,7 +177,7 @@
             </div>
             
             <div class="logo-container mx-auto mb-8 w-40 h-40 md:w-48 md:h-48 bg-white rounded-full p-2 shadow-2xl flex items-center justify-center border-4 border-white">
-                <img src="logo.jpg" alt="Fruit's Bounty Logo" class="w-full h-full object-contain rounded-full" onerror="this.src='https://placehold.co/400x400?text=Fruit%27s+Bounty'">
+                <img src="images.jpg" alt="Fruit's Bounty Logo" class="w-full h-full object-contain rounded-full" onerror="this.src='https://placehold.co/400x400?text=Fruit%27s+Bounty'">
             </div>
 
             <h1 class="text-5xl md:text-7xl font-800 tracking-tight text-[#5d1a24] leading-tight uppercase mb-4">
@@ -122,16 +208,16 @@
         </section>
 
         <!-- Products Section -->
-        <section class="w-full mb-20">
+        <section id="products" class="w-full mb-20">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-5xl font-800 text-[#5d1a24] mb-4 uppercase">Our Signature Mixes</h2>
                 <div class="h-1.5 w-24 bg-[#a52a40] mx-auto rounded-full"></div>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="product-card shadow-lg">
+                <article class="product-card shadow-lg">
                     <div class="h-60 bg-gray-100 relative">
-                        <img src="https://images.unsplash.com/photo-1519996529931-28324d5a630e?auto=format&fit=crop&q=80&w=600" alt="Exotic Mix" class="w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1519996529931-28324d5a630e?auto=format&fit=crop&q=80&w=600" alt="C-Glow Mix - Vitamin C Fruit Salad Jaipur" class="w-full h-full object-cover">
                         <div class="absolute top-4 right-4 bg-white/90 px-3 py-1 rounded-full text-[10px] font-bold text-[#a52a40] shadow-sm uppercase">Bestseller</div>
                     </div>
                     <div class="p-6">
@@ -142,11 +228,11 @@
                             <span class="text-xs font-bold text-emerald-600">Freshly Cut</span>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="product-card shadow-lg">
+                <article class="product-card shadow-lg">
                     <div class="h-60 bg-gray-100 relative">
-                        <img src="https://images.unsplash.com/photo-1490818387583-1baba5e638af?auto=format&fit=crop&q=80&w=600" alt="Berry Mix" class="w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1490818387583-1baba5e638af?auto=format&fit=crop&q=80&w=600" alt="Tropical Fruit Salad Jaipur - Seasonal Mix" class="w-full h-full object-cover">
                         <div class="absolute top-4 right-4 bg-[#a52a40] px-3 py-1 rounded-full text-[10px] font-bold text-white shadow-sm uppercase">Energy Plus</div>
                     </div>
                     <div class="p-6">
@@ -157,11 +243,11 @@
                             <span class="text-xs font-bold text-emerald-600">Pure Veg</span>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="product-card shadow-lg">
+                <article class="product-card shadow-lg">
                     <div class="h-60 bg-gray-100 relative">
-                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=600" alt="Sprouts Mix" class="w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=600" alt="Healthy Sprouts Mix Breakfast Jaipur" class="w-full h-full object-cover">
                         <div class="absolute top-4 right-4 bg-emerald-500 px-3 py-1 rounded-full text-[10px] font-bold text-white shadow-sm uppercase">Health First</div>
                     </div>
                     <div class="p-6">
@@ -172,7 +258,7 @@
                             <span class="text-xs font-bold text-emerald-600">High Protein</span>
                         </div>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
 
@@ -187,23 +273,23 @@
                 <form id="signup-form" class="space-y-5 text-left">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                         <div class="space-y-1.5">
-                            <label class="text-[11px] font-800 text-gray-400 uppercase tracking-widest ml-1">Name</label>
-                            <input type="text" required name="name" placeholder="Full Name" class="w-full px-5 py-4 rounded-2xl border border-gray-100 focus:ring-2 focus:ring-[#a52a40] outline-none bg-white">
+                            <label for="name" class="text-[11px] font-800 text-gray-400 uppercase tracking-widest ml-1">Name</label>
+                            <input type="text" id="name" required name="name" placeholder="Full Name" class="w-full px-5 py-4 rounded-2xl border border-gray-100 focus:ring-2 focus:ring-[#a52a40] outline-none bg-white">
                         </div>
                         <div class="space-y-1.5">
-                            <label class="text-[11px] font-800 text-gray-400 uppercase tracking-widest ml-1">WhatsApp Number</label>
-                            <input type="tel" required name="phone" placeholder="+91 XXXX" class="w-full px-5 py-4 rounded-2xl border border-gray-100 focus:ring-2 focus:ring-[#a52a40] outline-none bg-white">
+                            <label for="phone" class="text-[11px] font-800 text-gray-400 uppercase tracking-widest ml-1">WhatsApp Number</label>
+                            <input type="tel" id="phone" required name="phone" placeholder="+91 XXXX" class="w-full px-5 py-4 rounded-2xl border border-gray-100 focus:ring-2 focus:ring-[#a52a40] outline-none bg-white">
                         </div>
                     </div>
                     
                     <div class="space-y-1.5">
-                        <label class="text-[11px] font-800 text-gray-400 uppercase tracking-widest ml-1">Delivery Locality (Jaipur)</label>
-                        <input type="text" required name="area" placeholder="e.g. Vaishali Nagar, Hanuman Nagar, Chitrakoot" class="w-full px-5 py-4 rounded-2xl border border-gray-100 focus:ring-2 focus:ring-[#a52a40] outline-none bg-white">
+                        <label for="area" class="text-[11px] font-800 text-gray-400 uppercase tracking-widest ml-1">Delivery Locality (Jaipur)</label>
+                        <input type="text" id="area" required name="area" placeholder="e.g. Vaishali Nagar, Hanuman Nagar, Chitrakoot" class="w-full px-5 py-4 rounded-2xl border border-gray-100 focus:ring-2 focus:ring-[#a52a40] outline-none bg-white">
                     </div>
 
                     <div class="space-y-1.5">
-                        <label class="text-[11px] font-800 text-gray-400 uppercase tracking-widest ml-1">Select Your Morning Fuel</label>
-                        <select name="fruit" class="w-full px-5 py-4 rounded-2xl border border-gray-100 focus:ring-2 focus:ring-[#a52a40] outline-none bg-white cursor-pointer">
+                        <label for="fruit" class="text-[11px] font-800 text-gray-400 uppercase tracking-widest ml-1">Select Your Morning Fuel</label>
+                        <select id="fruit" name="fruit" class="w-full px-5 py-4 rounded-2xl border border-gray-100 focus:ring-2 focus:ring-[#a52a40] outline-none bg-white cursor-pointer">
                             <option>C-Glow Mix (Exotic Specialty)</option>
                             <option>Tropical Fruit Salad (Seasonal)</option>
                             <option>Sprouts Mix (Nutrition Blast)</option>
@@ -234,7 +320,7 @@
         <!-- Social & Final Footer -->
         <footer class="w-full text-center space-y-8 pb-8">
             <div class="flex items-center justify-center gap-6">
-                <a href="https://instagram.com/fruitsbounty" target="_blank" class="flex items-center gap-2 px-6 py-3 rounded-full bg-white shadow-md hover:text-[#a52a40] transition">
+                <a href="https://instagram.com/fruitsbounty" target="_blank" aria-label="Follow Fruit's Bounty on Instagram" class="flex items-center gap-2 px-6 py-3 rounded-full bg-white shadow-md hover:text-[#a52a40] transition">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.805.249 2.227.412.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36.164.412.422.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.054 1.17-.249 1.805-.412 2.227-.217.562-.477.96-.896 1.382-.42.419-.819.679-1.381.896-.422.164-1.056.359-1.227.412-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.054-1.805-.249-2.227-.412-.562-.217-.96-.477-1.382-.896-.419-.42-.679-.819-.896-1.381-.164-.422-.359-1.056-.412-1.227-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.054-1.17.249-1.805.412-2.227.217-.562.477-.96.896-1.382.42-.419.819-.679 1.381-.896.422-.164 1.056-.359 1.227-.412 1.266-.058 1.646-.07 4.85-.07m0-2.163c-3.259 0-3.667.014-4.947.072-1.277.057-2.148.261-2.911.558-.788.306-1.457.715-2.122 1.38-.665.665-1.074 1.334-1.38 2.122-.297.763-.501 1.634-.558 2.911-.058 1.28-.072 1.688-.072 4.947s.014 3.667.072 4.947c.057 1.277.261 2.148.558 2.911.306.788.715 1.457 1.38 2.122.665.665 1.334 1.074 2.122 1.38.763.297 1.634.501 2.911.558 1.28.058 1.688.072 4.947.072s3.667-.014 4.947-.072c1.277-.057 2.148-.261 2.911-.558.788-.306 1.457-.715 2.122-1.38.665-.665 1.074-1.334 1.38-2.122.297-.763.501-1.634.558-2.911.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.057-1.277-.261-2.148-.558-2.911-.306-.788-.715-1.457-1.38-2.122-.665-.665-1.334-1.074-2.122-1.38-.763-.297-1.634-.501-2.911-.558-1.28-.058-1.688-.072-4.947-.072z"/></svg>
                     <span class="font-bold text-sm">@fruitsbounty</span>
                 </a>
