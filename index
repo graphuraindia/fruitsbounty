@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit's Bounty | Jaipur's Freshest Morning Routine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Caveat:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-berry: #a52a40;
+            --brand-dark: #5d1a24;
+            --brand-cream: #fdf2f4;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--brand-cream);
+            color: var(--brand-dark);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .handwritten {
+            font-family: 'Caveat', cursive;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(165, 42, 64, 0.08);
+            box-shadow: 0 20px 50px -12px rgba(93, 26, 36, 0.12);
+        }
+
+        .fruit-float {
+            animation: float 8s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 0;
+            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.05));
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(10px, -20px) rotate(3deg); }
+            66% { transform: translate(-5px, -10px) rotate(-3deg); }
+        }
+
+        @media (max-width: 640px) {
+            .logo-container { width: 110px !important; height: 110px !important; }
+        }
+
+        input, select {
+            transition: all 0.2s ease-in-out;
+            appearance: none;
+        }
+
+        input:focus, select:focus {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(165, 42, 64, 0.1);
+        }
+
+        .brand-btn {
+            background: linear-gradient(135deg, #a52a40 0%, #7d1f30 100%);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .brand-btn:active { transform: scale(0.97); }
+
+        .product-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(165, 42, 64, 0.05);
+            overflow: hidden;
+        }
+        .product-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 40px -15px rgba(165, 42, 64, 0.2);
+            border-color: rgba(165, 42, 64, 0.15);
+        }
+        .product-card img {
+            transition: transform 0.5s ease;
+        }
+        .product-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .serving-badge {
+            background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <!-- Floating Background Decor -->
+    <div class="fixed top-[10%] left-[5%] text-6xl fruit-float opacity-30 hidden sm:block">🍓</div>
+    <div class="fixed top-[40%] -right-8 text-7xl fruit-float opacity-20" style="animation-delay: -2s">🥝</div>
+    <div class="fixed bottom-[10%] left-[10%] text-5xl fruit-float opacity-25" style="animation-delay: -4s">🍒</div>
+
+    <main class="relative z-10 w-full max-w-6xl mx-auto px-4 py-8 md:py-16 flex flex-col items-center">
+        
+        <!-- Header Section -->
+        <header class="text-center w-full mb-8">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#a52a40] text-white text-[10px] md:text-xs font-bold tracking-widest mb-6 shadow-lg uppercase">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-200 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+                </span>
+                LIVE IN JAIPUR 🏰
+            </div>
+            
+            <div class="logo-container mx-auto mb-6 w-36 h-36 md:w-44 md:h-44 bg-white rounded-full p-2 shadow-2xl flex items-center justify-center overflow-hidden border-4 border-white">
+                <img src="images.jpg" alt="Fruit's Bounty Logo" class="w-full h-full object-contain rounded-full" onerror="this.src='https://placehold.co/400x400?text=Fruit%27s+Bounty'">
+            </div>
+
+            <h1 class="text-4xl md:text-6xl font-800 tracking-tight text-[#5d1a24] leading-tight uppercase">
+                Fruit's Bounty
+            </h1>
+            <p class="handwritten text-2xl md:text-3xl text-[#a52a40] mt-2">The Journey of Two Brothers & Fresh Fruits</p>
+        </header>
+
+        <!-- Operating Info -->
+        <div class="mb-12 flex flex-wrap justify-center gap-3">
+            <div class="bg-white/80 px-4 py-2 rounded-xl shadow-sm border border-pink-100 flex items-center gap-2">
+                <span class="text-lg">⏰</span>
+                <span class="text-sm font-bold text-[#5d1a24]">6:00 AM - 11:00 AM</span>
+            </div>
+            <div class="bg-white/80 px-4 py-2 rounded-xl shadow-sm border border-pink-100 flex items-center gap-2">
+                <span class="text-lg">📍</span>
+                <span class="text-sm font-bold text-[#5d1a24]">Chitrakoot Stadium Area</span>
+            </div>
+            <div class="serving-badge px-4 py-2 rounded-xl shadow-lg flex items-center gap-2">
+                <span class="text-lg">🚚</span>
+                <span class="text-sm font-bold text-white uppercase tracking-wider">Now Serving Jaipur</span>
+            </div>
+        </div>
+
+        <!-- Menu/Products Section -->
+        <section class="w-full mb-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-5xl font-800 text-[#5d1a24] mb-4 uppercase tracking-tight">Signature Mixes</h2>
+                <div class="h-1.5 w-24 bg-[#a52a40] mx-auto rounded-full mb-4"></div>
+                <p class="text-gray-500 max-w-xl mx-auto text-sm md:text-base">Hand-cut every morning, curated for taste, and designed for your health.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Tropical Fruit Salad -->
+                <div class="product-card bg-white rounded-[2.5rem] flex flex-col">
+                    <div class="h-56 overflow-hidden bg-orange-50 relative">
+                        <img src="https://images.unsplash.com/photo-1519996529931-28324d5a630e?auto=format&fit=crop&q=80&w=800" alt="Tropical Fruit Salad" class="w-full h-full object-cover">
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-[10px] font-bold text-[#a52a40] uppercase">Fresh Daily</div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="text-2xl">🍍</span>
+                            <h3 class="text-xl font-bold text-[#5d1a24]">Tropical Mix</h3>
+                        </div>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-6 flex-grow">
+                            Our flagship blend featuring seasonal Indian favorites like Mango, Papaya, and Pomegranate, mixed with exotic Dragon Fruit and Kiwi. A natural energy booster to start your day.
+                        </p>
+                        <div class="pt-4 border-t border-gray-50 flex items-center justify-between">
+                            <span class="text-[11px] font-bold text-orange-500 uppercase tracking-widest">Focus: Fiber & Vit A</span>
+                            <span class="w-8 h-8 rounded-full bg-pink-50 flex items-center justify-center text-[#a52a40]">→</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- C-Glow Mix -->
+                <div class="product-card bg-white rounded-[2.5rem] flex flex-col relative">
+                    <div class="h-56 overflow-hidden bg-yellow-50 relative">
+                        <img src="https://images.unsplash.com/photo-1619566636858-adf3ef46400b?auto=format&fit=crop&q=80&w=800" alt="C-Glow Mix" class="w-full h-full object-cover">
+                        <div class="absolute top-4 left-4 bg-orange-500 px-3 py-1 rounded-full text-[10px] font-bold text-white uppercase shadow-lg">Bestseller</div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="text-2xl">✨</span>
+                            <h3 class="text-xl font-bold text-[#5d1a24]">C-Glow Mix</h3>
+                        </div>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-6 flex-grow">
+                            Designed specifically for skin health and immunity. A citrus-heavy mix featuring premium Oranges, Grapefruit, Pineapple, and Vitamin C rich berries. The ultimate morning radiance bowl.
+                        </p>
+                        <div class="pt-4 border-t border-gray-50 flex items-center justify-between">
+                            <span class="text-[11px] font-bold text-orange-500 uppercase tracking-widest">Focus: Vitamin C & Glow</span>
+                            <span class="w-8 h-8 rounded-full bg-pink-50 flex items-center justify-center text-[#a52a40]">→</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sprouts Mix -->
+                <div class="product-card bg-white rounded-[2.5rem] flex flex-col">
+                    <div class="h-56 overflow-hidden bg-green-50 relative">
+                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=800" alt="Sprouts Mix" class="w-full h-full object-cover">
+                        <div class="absolute top-4 left-4 bg-emerald-500 px-3 py-1 rounded-full text-[10px] font-bold text-white uppercase shadow-lg">New Launch</div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="text-2xl">🌱</span>
+                            <h3 class="text-xl font-bold text-[#5d1a24]">Sprouts Mix</h3>
+                        </div>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-6 flex-grow">
+                            A nutritional powerhouse. Lightly seasoned organic sprouts combined with crunchy pomegranate and tangy apple bits. High in protein and perfect for those with an active lifestyle.
+                        </p>
+                        <div class="pt-4 border-t border-gray-50 flex items-center justify-between">
+                            <span class="text-[11px] font-bold text-emerald-600 uppercase tracking-widest">Focus: Plant Protein</span>
+                            <span class="w-8 h-8 rounded-full bg-pink-50 flex items-center justify-center text-[#a52a40]">→</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content Card / Form -->
+        <section class="w-full max-w-2xl glass rounded-[2.5rem] p-6 md:p-12 text-center relative overflow-hidden mb-12">
+            <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#a52a40] via-[#ef4444] to-[#a52a40]"></div>
+
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-2">Morning Freshness, Delivered.</h2>
+            <p class="text-emerald-600 font-bold text-sm mb-6 uppercase tracking-widest">Available across Vaishali Nagar & Chitrakoot</p>
+            <p class="text-gray-600 mb-10 text-base md:text-lg">We're bringing our stadium-famous fruit bowls directly to your home. Sign up below to join our morning delivery route.</p>
+
+            <!-- Form -->
+            <div id="form-container">
+                <form id="signup-form" class="space-y-5 text-left">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <div class="space-y-1.5">
+                            <label class="text-[11px] font-800 text-gray-400 uppercase tracking-widest ml-1">Name</label>
+                            <input type="text" required name="name" placeholder="Full Name" class="w-full px-5 py-4 rounded-2xl border border-gray-100 focus:ring-2 focus:ring-[#a52a40] outline-none bg-white">
+                        </div>
+                        <div class="space-y-1.5">
+                            <label class="text-[11px] font-800 text-gray-400 uppercase tracking-widest ml-1">WhatsApp Number</label>
+                            <input type="tel" required name="phone" placeholder="+91 XXXX" class="w-full px-5 py-4 rounded-2xl border border-gray-100 focus:ring-2 focus:ring-[#a52a40] outline-none bg-white">
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-1.5">
+                        <label class="text-[11px] font-800 text-gray-400 uppercase tracking-widest ml-1">Delivery Locality (Jaipur)</label>
+                        <input type="text" required name="area" placeholder="e.g. Vaishali Nagar, Hanuman Nagar, Chitrakoot" class="w-full px-5 py-4 rounded-2xl border border-gray-100 focus:ring-2 focus:ring-[#a52a40] outline-none bg-white">
+                    </div>
+
+                    <div class="space-y-1.5">
+                        <label class="text-[11px] font-800 text-gray-400 uppercase tracking-widest ml-1">Select Your Morning Fuel</label>
+                        <select name="fruit" class="w-full px-5 py-4 rounded-2xl border border-gray-100 focus:ring-2 focus:ring-[#a52a40] outline-none bg-white cursor-pointer">
+                            <option>C-Glow Mix (Exotic Specialty)</option>
+                            <option>Tropical Fruit Salad (Seasonal)</option>
+                            <option>Sprouts Mix (Nutrition Blast)</option>
+                            <option>Founder's Choice (Custom Mix)</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" id="submit-btn" class="brand-btn w-full text-white font-bold py-5 rounded-2xl shadow-xl hover:-translate-y-1 active:translate-y-0 uppercase tracking-widest text-sm">
+                        Request Doorstep Delivery
+                    </button>
+                </form>
+            </div>
+
+            <div id="success-msg" class="hidden py-10 animate-fade-in">
+                <div class="inline-flex items-center justify-center w-20 h-20 bg-pink-100 rounded-full text-4xl mb-6">🥣</div>
+                <h3 class="text-3xl font-bold text-[#5d1a24] mb-3">Khamma Ghani!</h3>
+                <p class="text-gray-600 max-w-sm mx-auto mb-8">You're on our Jaipur delivery list. We'll WhatsApp you shortly to confirm your slot!</p>
+                <button onclick="location.reload()" class="text-[#a52a40] font-bold text-sm uppercase tracking-widest hover:underline">Register Another</button>
+            </div>
+        </section>
+
+        <!-- Story/Journey Footer -->
+        <div class="max-w-3xl w-full bg-white/40 rounded-[2rem] p-8 text-center border border-white/50 mb-12">
+            <h4 class="font-800 text-[#5d1a24] uppercase text-xs tracking-[0.2em] mb-4">The Brother's Journey</h4>
+            <p class="text-gray-600 text-sm italic leading-relaxed">"What started as a small stall near Chitrakoot Stadium is now digitalizing to serve all of Jaipur. We believe everyone deserves a fresh, healthy start to their morning without leaving their home."</p>
+        </div>
+
+        <!-- Social & Final Footer -->
+        <footer class="w-full text-center space-y-8 pb-8">
+            <div class="flex items-center justify-center gap-6">
+                <a href="https://instagram.com/fruitsbounty" target="_blank" class="flex items-center gap-2 px-6 py-3 rounded-full bg-white shadow-md hover:text-[#a52a40] transition">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.805.249 2.227.412.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36.164.412.422.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.054 1.17-.249 1.805-.412 2.227-.217.562-.477.96-.896 1.382-.42.419-.819.679-1.381.896-.422.164-1.056.359-1.227.412-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.054-1.805-.249-2.227-.412-.562-.217-.96-.477-1.382-.896-.419-.42-.679-.819-.896-1.381-.164-.422-.359-1.056-.412-1.227-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.054-1.17.249-1.805.412-2.227.217-.562.477-.96.896-1.382.42-.419.819-.679 1.381-.896.422-.164 1.056-.359 1.227-.412 1.266-.058 1.646-.07 4.85-.07m0-2.163c-3.259 0-3.667.014-4.947.072-1.277.057-2.148.261-2.911.558-.788.306-1.457.715-2.122 1.38-.665.665-1.074 1.334-1.38 2.122-.297.763-.501 1.634-.558 2.911-.058 1.28-.072 1.688-.072 4.947s.014 3.667.072 4.947c.057 1.277.261 2.148.558 2.911.306.788.715 1.457 1.38 2.122.665.665 1.334 1.074 2.122 1.38.763.297 1.634.501 2.911.558 1.28.058 1.688.072 4.947.072s3.667-.014 4.947-.072c1.277-.057 2.148-.261 2.911-.558.788-.306 1.457-.715 2.122-1.38.665-.665 1.074-1.334 1.38-2.122.297-.763.501-1.634.558-2.911.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.057-1.277-.261-2.148-.558-2.911-.306-.788-.715-1.457-1.38-2.122-.665-.665-1.334-1.074-2.122-1.38-.763-.297-1.634-.501-2.911-.558-1.28-.058-1.688-.072-4.947-.072z"/></svg>
+                    <span class="font-bold text-sm">@fruitsbounty</span>
+                </a>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="space-y-1">
+                    <p class="font-bold text-[#5d1a24] text-xs uppercase tracking-[0.2em]">Fruit's Bounty | Jaipur's Pride</p>
+                    <p class="text-gray-400 text-[10px] tracking-wide italic">"Khamma Ghani! Serving freshness since 6 AM."</p>
+                </div>
+                
+                <div class="pt-4 border-t border-pink-100 max-w-xs mx-auto">
+                    <p class="text-[9px] font-bold text-gray-400 uppercase tracking-widest mb-1">DESIGN AND DEVELOP BY</p>
+                    <a href="https://graphura.com" target="_blank" class="text-[11px] font-800 text-[#a52a40] tracking-tight hover:opacity-75 transition-opacity decoration-dotted underline underline-offset-4">
+                        GRAPHURA INDIA PRIVATE LIMITED
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        const form = document.getElementById('signup-form');
+        const submitBtn = document.getElementById('submit-btn');
+        const formContainer = document.getElementById('form-container');
+        const successMsg = document.getElementById('success-msg');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            submitBtn.innerHTML = "Processing Your Order...";
+            submitBtn.disabled = true;
+
+            const formData = new FormData(form);
+            const data = {
+                name: formData.get('name'),
+                phone: formData.get('phone'),
+                area: formData.get('area'),
+                selection: formData.get('fruit'),
+                city: 'Jaipur',
+                timestamp: new Date().toISOString()
+            };
+
+            console.log("Adding to Jaipur Master Sheet:", data);
+
+            setTimeout(() => {
+                formContainer.classList.add('hidden');
+                successMsg.classList.remove('hidden');
+            }, 1200);
+        });
+    </script>
+</body>
+</html>
